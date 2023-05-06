@@ -8,8 +8,8 @@ import {code, pre} from "telegraf/format";
 const INIT_SESSION = {
   messages: []
 }
-const bot = new Telegraf(config.get('TELEGRAM_TOKEN'))
-const openAI = new OpenAI(config.get('OPENAI_TOKEN'))
+const bot = new Telegraf(config.get('TELEGRAM_TOKEN') || process.env.TELEGRAM_TOKEN)
+const openAI = new OpenAI(config.get('OPENAI_TOKEN') || process.env.OPENAI_TOKEN)
 
 bot.use(session())
 bot.command("new", async (ctx) => {
