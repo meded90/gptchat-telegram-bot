@@ -25,3 +25,7 @@ run: docker-build docker-run
 
 # Остановка контейнера
 stop: docker-stop
+
+# Запуск тестового окружения
+dev:
+	deno task dev

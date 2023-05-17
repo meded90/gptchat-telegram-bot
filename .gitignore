@@ -3,4 +3,5 @@ node_modules
 config/default.json
 config/prodaction.json
 ogg/*.mp3
-./machinet.conf
+machinet.conf
+.env
